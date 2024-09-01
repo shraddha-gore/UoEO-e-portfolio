@@ -92,6 +92,65 @@
                 </div>
             </section>
 
+            <!-- Team Activity -->
+            <section id="team-activity">
+                <div class="inner">
+                    <h4>Team Discussion: What is a Secure Programming Language?</h4>
+                    <p>You should read Chapter 2,6,7,8 of the course text (Pillai, 2017) and Cifuentes & Bierman (2019)
+                        and then answer the questions below, adding them as evidence to your e-portfolio.</p>
+                    <div class="question-section">
+                        <h4>1. What factors determine whether a programming language is secure or not?</h4>
+                        <ul>
+                            <li>Injection: Compile SQL queries from another language, escaping special characters. But
+                                doing
+                                this creates a trade-off in that some features relying on special characters in SQL
+                                syntax
+                                may become harder to use or unavailable. E.g., querying an ltree column in SQL while
+                                escaping special characters in the SQL statement.
+                            </li>
+                            <li>Information leaks: Languages like C—manual memory management—could expose parts of
+                                memory
+                                that shouldn't be exposed—e.g., an attacker can read information in memory that they
+                                shouldn't have access to.
+                            </li>
+                            <li>Buffer overflow: E.g., Rust automatically frees memory after variables go out of scope.
+                            </li>
+                            <li>Conclusion: No language is fully secure. Every language has different properties that
+                                make it more or less secure in different ways.</li>
+                        </ul>
+                    </div>
+                    <div class="question-section">
+                        <h4>2. Could Python be classified as a secure language? Justify your answer.</h4>
+                        <ul>
+                            <li>Python has garbage collection, which gives it protection against buffer overflow
+                                compared to languages without garbage collection like C.</li>
+                            <li>Use built-in features of a programming language or framework (e.g., Django’s ORM to
+                                escape SQL queries) or use external libraries or custom implementations.</li>
+                            <li>Python is a very widely used language, with not many security incidents relating to the
+                                language itself.</li>
+                            <li>Despite this, as mentioned above, no language is fully secure, including Python.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="question-section">
+                        <h4>3. Python would be a better language to create operating systems than C. Discuss.</h4>
+                        <ul>
+                            <li>Python would be better in a way because it’s more secure, but it would be impractical to
+                                use for an operating system because it is an interpreted language that is executed
+                                slower than a compiled language like C.</li>
+                            <li>Python does not have access to low-level features such as hardware and memory
+                                addressing, instead relying on abstractions provided by an existing kernel. It is
+                                theoretically possible to create an operating system based mainly on Python, but
+                                low-level features will have to be coded in a different language like C.</li>
+                            <li>In such a scenario, since we are not fully using Python, we do not benefit entirely from
+                                its security features. Languages like C, C++, and Rust are more suitable for the task
+                                than Python. Rust’s security features give it a benefit in writing operating systems
+                                over C.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
             <!-- Meeting Notes -->
             <section id="notes">
                 <div class="inner">
