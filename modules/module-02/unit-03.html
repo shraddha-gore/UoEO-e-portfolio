@@ -1,252 +1,321 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
 	Forty by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-
-<head>
+  <head>
     <title>Shraddha's UoEO e-Portfolio</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
     <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link
+      rel="icon"
+      href="../../images/sg-logo-color.png"
+      type="image/x-icon"
+    />
     <noscript>
-        <link rel="stylesheet" href="../../assets/css/noscript.css" />
+      <link rel="stylesheet" href="../../assets/css/noscript.css" />
     </noscript>
-</head>
+  </head>
 
-<body class="is-preload">
-
+  <body class="is-preload">
     <!-- Wrapper -->
     <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="alt style2">
+        <a href="../../index.html" class="logo"><strong>Home</strong></a>
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
 
-        <!-- Header -->
-        <header id="header" class="alt style2">
-            <a href="../../index.html" class="logo"><strong>Home</strong></a>
-            <nav>
-                <a href="#menu">Menu</a>
-            </nav>
-        </header>
-
-        <!-- Menu -->
-        <nav id="menu">
-            <ul class="links">
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="../module-01/module-page.html">Module 1</a></li>
-                <li><a href="module-page.html">Module 2</a></li>
-                <!-- <li><a href="landing.html">Landing</a></li> -->
-                <!-- <li><a href="generic.html">Generic</a></li> -->
-                <!-- <li><a href="elements.html">Elements</a></li> -->
-            </ul>
-            <!--
+      <!-- Menu -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../module-01/module-page.html">Module 1</a></li>
+          <li><a href="module-page.html">Module 2</a></li>
+          <!-- <li><a href="landing.html">Landing</a></li> -->
+          <!-- <li><a href="generic.html">Generic</a></li> -->
+          <!-- <li><a href="elements.html">Elements</a></li> -->
+        </ul>
+        <!--
             <ul class="actions stacked">
                 <li><a href="#" class="button primary fit">Get Started</a></li>
                 <li><a href="#" class="button fit">Log In</a></li>
             </ul>
             -->
-        </nav>
+      </nav>
 
-        <!-- Main -->
-        <div id="main" class="alt">
+      <!-- Main -->
+      <div id="main" class="alt">
+        <!-- Overview -->
+        <section id="overview">
+          <div class="inner">
+            <header class="major">
+              <h1>Module 2</h1>
+              <p>Secure Software Development (Computer Science)</p>
+            </header>
+            <header class="major">
+              <h3>Unit 3</h3>
+              <p>Programming Languages: History, Concepts & Design</p>
+            </header>
+          </div>
+        </section>
 
-            <!-- Overview -->
-            <section id="overview">
-                <div class="inner">
-                    <header class="major">
-                        <h1>Module 2</h1>
-                        <p>Secure Software Development (Computer Science)</p>
-                    </header>
-                    <header class="major">
-                        <h3>Unit 3</h3>
-                        <p>Programming Languages: History, Concepts & Design</p>
-                    </header>
-                </div>
-            </section>
+        <!-- Learning Outcomes -->
+        <section id="outcomes">
+          <div class="inner">
+            <h4>Learning Outcomes</h4>
+            <ul>
+              <li>
+                Describe some key milestones in the development of programming
+                languages.
+              </li>
+              <li>
+                Outline some of the key paradigms that define the different
+                types of languages.
+              </li>
+              <li>
+                Explain the key concepts that determine the operation of
+                programming languages.
+              </li>
+              <li>
+                Discuss key programming challenges and recommended best
+                practices.
+              </li>
+              <li>Explain what design patterns are and when to use them.</li>
+            </ul>
+          </div>
+        </section>
 
+        <!-- Artifacts -->
+        <section id="artifacts">
+          <div class="inner">
+            <h4>Artifacts</h4>
+            <ul>
+              <li>
+                A summary post was provided to the discussion forum. Link to the
+                discussion forum's post:
+                <a
+                  href="https://www.my-course.co.uk/mod/forum/discuss.php?d=248411"
+                  target="_blank"
+                  >here</a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
 
-            <!-- Learning Outcomes -->
-            <section id="outcomes">
-                <div class="inner">
-                    <h4>Learning Outcomes</h4>
-                    <ul>
-                        <li>Describe some key milestones in the development of programming languages.</li>
-                        <li>Outline some of the key paradigms that define the different types of languages.</li>
-                        <li>Explain the key concepts that determine the operation of programming languages.</li>
-                        <li>Discuss key programming challenges and recommended best practices.</li>
-                        <li>Explain what design patterns are and when to use them.</li>
-                    </ul>
-                </div>
-            </section>
+        <!-- Team Activity -->
+        <section id="team-activity">
+          <div class="inner">
+            <h4>Team Discussion: What is a Secure Programming Language?</h4>
+            <p>
+              You should read Chapter 2,6,7,8 of the course text (Pillai, 2017)
+              and Cifuentes & Bierman (2019) and then answer the questions
+              below, adding them as evidence to your e-portfolio.
+            </p>
+            <div class="question-section">
+              <h4>
+                1. What factors determine whether a programming language is
+                secure or not?
+              </h4>
+              <ul>
+                <li>
+                  Injection: Compile SQL queries from another language, escaping
+                  special characters. But doing this creates a trade-off in that
+                  some features relying on special characters in SQL syntax may
+                  become harder to use or unavailable. E.g., querying an ltree
+                  column in SQL while escaping special characters in the SQL
+                  statement.
+                </li>
+                <li>
+                  Information leaks: Languages like C—manual memory
+                  management—could expose parts of memory that shouldn't be
+                  exposed—e.g., an attacker can read information in memory that
+                  they shouldn't have access to.
+                </li>
+                <li>
+                  Buffer overflow: E.g., Rust automatically frees memory after
+                  variables go out of scope.
+                </li>
+                <li>
+                  Conclusion: No language is fully secure. Every language has
+                  different properties that make it more or less secure in
+                  different ways.
+                </li>
+              </ul>
+            </div>
+            <div class="question-section">
+              <h4>
+                2. Could Python be classified as a secure language? Justify your
+                answer.
+              </h4>
+              <ul>
+                <li>
+                  Python has garbage collection, which gives it protection
+                  against buffer overflow compared to languages without garbage
+                  collection like C.
+                </li>
+                <li>
+                  Use built-in features of a programming language or framework
+                  (e.g., Django’s ORM to escape SQL queries) or use external
+                  libraries or custom implementations.
+                </li>
+                <li>
+                  Python is a very widely used language, with not many security
+                  incidents relating to the language itself.
+                </li>
+                <li>
+                  Despite this, as mentioned above, no language is fully secure,
+                  including Python.
+                </li>
+              </ul>
+            </div>
+            <div class="question-section">
+              <h4>
+                3. Python would be a better language to create operating systems
+                than C. Discuss.
+              </h4>
+              <ul>
+                <li>
+                  Python would be better in a way because it’s more secure, but
+                  it would be impractical to use for an operating system because
+                  it is an interpreted language that is executed slower than a
+                  compiled language like C.
+                </li>
+                <li>
+                  Python does not have access to low-level features such as
+                  hardware and memory addressing, instead relying on
+                  abstractions provided by an existing kernel. It is
+                  theoretically possible to create an operating system based
+                  mainly on Python, but low-level features will have to be coded
+                  in a different language like C.
+                </li>
+                <li>
+                  In such a scenario, since we are not fully using Python, we do
+                  not benefit entirely from its security features. Languages
+                  like C, C++, and Rust are more suitable for the task than
+                  Python. Rust’s security features give it a benefit in writing
+                  operating systems over C.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-            <!-- Artifacts -->
-            <section id="artifacts">
-                <div class="inner">
-                    <h4>Artifacts</h4>
-                    <ul>
-                        <li>A summary post was provided to the discussion forum. Link to the discussion forum's post: <a
-                                href="https://www.my-course.co.uk/mod/forum/discuss.php?d=248411"
-                                target="_blank">here</a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+        <!-- Meeting Notes -->
+        <section id="notes">
+          <div class="inner">
+            <h4>Meeting Notes</h4>
+            <div>
+              <b>Meeting 1</b>
+              <ul>
+                <li><b>Date: </b>14 August 2024</li>
+                <li><b>Time (UK): </b>18:00–18:20</li>
+                <li><b>Venue: </b>Zoom</li>
+                <li>
+                  <b>Attendees: </b>Anupam Mazumdar, Adriaan Joubert, and
+                  Shraddha Gore
+                </li>
+                <li>
+                  <b>Agenda: </b>
+                  <ul>
+                    <li>Anupam confirmed the scope of the application.</li>
+                    <li>
+                      The requirements of the design document and peer review
+                      were discussed.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Next steps: </b>
+                  <ul>
+                    <li>
+                      Set up a team meeting to divide responsibilities and start
+                      working on the design document.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-            <!-- Team Activity -->
-            <section id="team-activity">
-                <div class="inner">
-                    <h4>Team Discussion: What is a Secure Programming Language?</h4>
-                    <p>You should read Chapter 2,6,7,8 of the course text (Pillai, 2017) and Cifuentes & Bierman (2019)
-                        and then answer the questions below, adding them as evidence to your e-portfolio.</p>
-                    <div class="question-section">
-                        <h4>1. What factors determine whether a programming language is secure or not?</h4>
-                        <ul>
-                            <li>Injection: Compile SQL queries from another language, escaping special characters. But
-                                doing
-                                this creates a trade-off in that some features relying on special characters in SQL
-                                syntax
-                                may become harder to use or unavailable. E.g., querying an ltree column in SQL while
-                                escaping special characters in the SQL statement.
-                            </li>
-                            <li>Information leaks: Languages like C—manual memory management—could expose parts of
-                                memory
-                                that shouldn't be exposed—e.g., an attacker can read information in memory that they
-                                shouldn't have access to.
-                            </li>
-                            <li>Buffer overflow: E.g., Rust automatically frees memory after variables go out of scope.
-                            </li>
-                            <li>Conclusion: No language is fully secure. Every language has different properties that
-                                make it more or less secure in different ways.</li>
-                        </ul>
-                    </div>
-                    <div class="question-section">
-                        <h4>2. Could Python be classified as a secure language? Justify your answer.</h4>
-                        <ul>
-                            <li>Python has garbage collection, which gives it protection against buffer overflow
-                                compared to languages without garbage collection like C.</li>
-                            <li>Use built-in features of a programming language or framework (e.g., Django’s ORM to
-                                escape SQL queries) or use external libraries or custom implementations.</li>
-                            <li>Python is a very widely used language, with not many security incidents relating to the
-                                language itself.</li>
-                            <li>Despite this, as mentioned above, no language is fully secure, including Python.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="question-section">
-                        <h4>3. Python would be a better language to create operating systems than C. Discuss.</h4>
-                        <ul>
-                            <li>Python would be better in a way because it’s more secure, but it would be impractical to
-                                use for an operating system because it is an interpreted language that is executed
-                                slower than a compiled language like C.</li>
-                            <li>Python does not have access to low-level features such as hardware and memory
-                                addressing, instead relying on abstractions provided by an existing kernel. It is
-                                theoretically possible to create an operating system based mainly on Python, but
-                                low-level features will have to be coded in a different language like C.</li>
-                            <li>In such a scenario, since we are not fully using Python, we do not benefit entirely from
-                                its security features. Languages like C, C++, and Rust are more suitable for the task
-                                than Python. Rust’s security features give it a benefit in writing operating systems
-                                over C.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Meeting Notes -->
-            <section id="notes">
-                <div class="inner">
-                    <h4>Meeting Notes</h4>
-                    <div>
-                        <b>Meeting 1</b>
-                        <ul>
-                            <li><b>Date: </b>14 August 2024</li>
-                            <li><b>Time (UK): </b>18:00–18:20</li>
-                            <li><b>Venue: </b>Zoom</li>
-                            <li><b>Attendees: </b>Anupam Mazumdar, Adriaan Joubert, and Shraddha Gore</li>
-                            <li><b>Agenda: </b>
-                                <ul>
-                                    <li>Anupam confirmed the scope of the application.</li>
-                                    <li>The requirements of the design document and peer review were discussed.</li>
-                                </ul>
-                            </li>
-                            <li><b>Next steps: </b>
-                                <ul>
-                                    <li>Set up a team meeting to divide responsibilities and start working on the design
-                                        document.
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Reflection -->
-            <!--
+        <!-- Reflection -->
+        <!--
             <section id="reflection">
                 <div class="inner">
                     <h4>Reflection</h4>
                 </div>
             </section>
             -->
+      </div>
 
+      <!-- Contact -->
+      <section id="contact">
+        <div class="inner">
+          <section>
+            <form method="post" action="#">
+              <div class="fields">
+                <div class="field half">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" />
+                </div>
+                <div class="field half">
+                  <label for="email">Email</label>
+                  <input type="text" name="email" id="email" />
+                </div>
+                <div class="field">
+                  <label for="message">Message</label>
+                  <textarea name="message" id="message" rows="6"></textarea>
+                </div>
+              </div>
+              <ul class="actions">
+                <li>
+                  <input type="submit" value="Send Message" class="primary" />
+                </li>
+                <li><input type="reset" value="Clear" /></li>
+              </ul>
+            </form>
+          </section>
+          <section class="split">
+            <section>
+              <div class="contact-method">
+                <span class="icon solid alt fa-envelope"></span>
+                <h3>Email</h3>
+                <a href="#">sg24002@essex.ac.uk</a>
+              </div>
+            </section>
+            <section>
+              <div class="contact-method">
+                <span class="icon solid alt fa-phone"></span>
+                <h3>Phone</h3>
+                <span>-</span>
+              </div>
+            </section>
+            <section>
+              <div class="contact-method">
+                <span class="icon solid alt fa-home"></span>
+                <h3>Address</h3>
+                <span>Mumbai, India</span>
+              </div>
+            </section>
+          </section>
         </div>
+      </section>
 
-        <!-- Contact -->
-        <section id="contact">
-            <div class="inner">
-                <section>
-                    <form method="post" action="#">
-                        <div class="fields">
-                            <div class="field half">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" id="name" />
-                            </div>
-                            <div class="field half">
-                                <label for="email">Email</label>
-                                <input type="text" name="email" id="email" />
-                            </div>
-                            <div class="field">
-                                <label for="message">Message</label>
-                                <textarea name="message" id="message" rows="6"></textarea>
-                            </div>
-                        </div>
-                        <ul class="actions">
-                            <li><input type="submit" value="Send Message" class="primary" /></li>
-                            <li><input type="reset" value="Clear" /></li>
-                        </ul>
-                    </form>
-                </section>
-                <section class="split">
-                    <section>
-                        <div class="contact-method">
-                            <span class="icon solid alt fa-envelope"></span>
-                            <h3>Email</h3>
-                            <a href="#">sg24002@essex.ac.uk</a>
-                        </div>
-                    </section>
-                    <section>
-                        <div class="contact-method">
-                            <span class="icon solid alt fa-phone"></span>
-                            <h3>Phone</h3>
-                            <span>-</span>
-                        </div>
-                    </section>
-                    <section>
-                        <div class="contact-method">
-                            <span class="icon solid alt fa-home"></span>
-                            <h3>Address</h3>
-                            <span>Mumbai, India</span>
-                        </div>
-                    </section>
-                </section>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer id="footer">
-            <div class="inner">
-                <ul class="icons">
-                    <!--
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <ul class="icons">
+            <!--
 					<li><a href="#" class="icon brands alt fa-twitter" target="_blank"><span
 								class="label">Twitter</span></a></li>
 					<li><a href="#" class="icon brands alt fa-facebook-f" target="_blank"><span
@@ -254,18 +323,29 @@
 					<li><a href="#" class="icon brands alt fa-instagram" target="_blank"><span
 								class="label">Instagram</span></a></li>
 					-->
-                    <li><a href="https://github.com/shraddha-gore/" class="icon brands alt fa-github"
-                            target="_blank"><span class="label">GitHub</span></a></li>
-                    <li><a href="https://www.linkedin.com/in/shraddhagore/" class="icon brands alt fa-linkedin-in"
-                            target="_blank"><span class="label">LinkedIn</span></a></li>
-                </ul>
-                <ul class="copyright">
-                    <li>&copy; Untitled</li>
-                    <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-                </ul>
-            </div>
-        </footer>
-
+            <li>
+              <a
+                href="https://github.com/shraddha-gore/"
+                class="icon brands alt fa-github"
+                target="_blank"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/shraddhagore/"
+                class="icon brands alt fa-linkedin-in"
+                target="_blank"
+                ><span class="label">LinkedIn</span></a
+              >
+            </li>
+          </ul>
+          <ul class="copyright">
+            <li>&copy; Untitled</li>
+            <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </footer>
     </div>
 
     <!-- Scripts -->
@@ -276,7 +356,5 @@
     <script src="../../assets/js/breakpoints.min.js"></script>
     <script src="../../assets/js/util.js"></script>
     <script src="../../assets/js/main.js"></script>
-
-</body>
-
+  </body>
 </html>
