@@ -97,6 +97,124 @@
             </section>
             -->
 
+        <!-- Portfolio Component -->
+        <section id="portfolio-component">
+          <div class="inner">
+            <h4>Portfolio Component: What is an Ontology?</h4>
+            <p>
+              What do you understand about the ontology that has been presented
+              for your reading this week? Could you attempt to define an
+              ontology that would be relevant to the system that you are
+              designing for the summative assessment?
+            </p>
+            <b>Response:</b>
+            <div class="response">
+              <p>
+                Ontology provides a formal representation of knowledge by
+                categorising and organising the different concepts, attributes,
+                and interactions that occur in the system. Key components of an
+                ontology are classes, properties, and relationships. Below is a
+                high-level ontology for the online retailer system to be
+                developed in unit 11:
+              </p>
+              <ol>
+                <li>
+                  User
+                  <ul>
+                    <li>
+                      Properties:
+                      <ul>
+                        <li>username: Unique identifier for each user.</li>
+                        <li>
+                          password: Hashed password for user authentication.
+                        </li>
+                        <li>
+                          is_admin: Boolean indicating if the user has
+                          administrative privileges.
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      Relationships:
+                      <ul>
+                        <li>
+                          Places Orders: A user can place multiple orders.
+                        </li>
+                        <li>
+                          Views Products and Orders: Users can view products
+                          available in the system and their past orders.
+                        </li>
+                        <li>
+                          Admin Privileges: A user with admin privileges can
+                          view system stats and update them.
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  Product
+                  <ul>
+                    <li>
+                      Properties:
+                      <ul>
+                        <li>
+                          name: Name of the product, acting as a unique
+                          identifier.
+                        </li>
+                        <li>price: Price of the product.</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Relationships:
+                      <ul>
+                        <li>
+                          Associated with Orders: Product is a part of orders
+                          placed by users.
+                        </li>
+                        <li>
+                          Viewed by Users: Users can view products available in
+                          the system.
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  Order
+                  <ul>
+                    <li>
+                      Properties:
+                      <ul>
+                        <li>order_id: Unique identifier for each order.</li>
+                        <li>username: User who placed the order.</li>
+                        <li>
+                          product_name: The product associated with the order.
+                        </li>
+                        <li>quantity: Number of products in the order.</li>
+                        <li>total: Total cost of the order.</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Relationships:
+                      <ul>
+                        <li>
+                          Placed by User: Each order is associated with a user.
+                        </li>
+                        <li>
+                          Viewed by Users: Users can view their past orders.
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
         <!-- Meeting Notes -->
         <!--
             <section id="notes">
