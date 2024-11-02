@@ -74,10 +74,10 @@
               <p>Object Oriented Programming</p>
             </header>
             <header class="major">
-              <h3>Unit 1</h3>
+              <h3>Unit 2</h3>
               <p>
-                An Introduction to Python Programming and the OO Programming
-                Paradigm
+                Object Oriented Analysis - Initial Steps towards Programming in
+                Python
               </p>
             </header>
           </div>
@@ -89,14 +89,11 @@
             <h4>Learning Outcomes</h4>
             <ul>
               <li>
-                Describe the major features of an object-oriented program, in
-                the sense of having abstract classes, applying inheritance,
-                using encapsulation, and including polymorphism.
+                Design a use case diagram for a software development scenario.
               </li>
-              <li>Define a Python class.</li>
               <li>
-                Define a variety of data types to variables in a Python program
-                and adapt the access modifier applied to each.
+                Create a state machine diagram to examine the behaviours and
+                interactions within a system.
               </li>
             </ul>
           </div>
@@ -111,12 +108,10 @@
             </h4>
             <ul>
               <li>
-                Based on the article by Padhy et al. (2018), a re-prioritized
-                list of factors influencing reusability in object-oriented
-                software was shared along with reasoning. Link to the discussion
-                forum's post:
+                The discussion started in the previous unit was continued. Link
+                to the discussion forum:
                 <a
-                  href="https://www.my-course.co.uk/mod/forum/discuss.php?d=261146"
+                  href="https://www.my-course.co.uk/mod/forum/view.php?id=1085640"
                   target="_blank"
                   >here</a
                 >
@@ -128,66 +123,227 @@
         <!-- Activity -->
         <section id="activity">
           <div class="inner">
-            <h4>Pratical Activity - Classes and Objects</h4>
+            <h4>Pratical Activity - Class Functions and Methods</h4>
             <p>
-              Take a look at chapter 15 of '<a
+              Access chapters 16 and 17 in '<a
                 href="https://greenteapress.com/thinkpython2/thinkpython2.pdf"
                 target="_blank"
                 >Think Python</a
-              >', from page 147. Also, take a look at '<a
-                href="https://github.com/AllenDowney/ThinkPython2/blob/master/code/Point1.py"
+              >' to help you better understand this week's concepts. You are
+              able to use the '<a
+                href="https://github.com/AllenDowney/ThinkPython2/blob/master/code/Time1.py"
                 target="_blank"
-                >Point1.py</a
-              >' from GitHub. Work through the guidance and experiment with the
-              code in PyCharm.
+                >time1.py</a
+              >' code example within GitHub to help you understand the chapter
+              16 concepts. You can also use the '<a
+                href="https://github.com/AllenDowney/ThinkPython2/blob/master/code/Time2.py"
+                target="_blank"
+                >time2.py</a
+              >' code example within GitHub to help you understand the chapter
+              17 concepts.
             </p>
 
             <div class="exercise">
-              <b>Exercise 15.1:</b>
+              <b>Exercise 16.1:</b>
               <p>
-                Write a definition for a class named Circle with attributes
-                center and radius, where center is a Point object and radius is
-                a number.<br />
-                Instantiate a Circle object that represents a circle with its
-                center at (150, 100) and radius 75.<br />Write a function named
-                point_in_circle that takes a Circle and a Point and returns True
-                if the Point lies in or on the boundary of the circle.
+                Write a function called <code>mul_time</code> that takes a Time
+                object and a number and returns a new Time object that contains
+                the product of the original Time and the number.
               </p>
 
               <div class="response">
                 <b>Code:</b>
                 <pre>
               <code>
-import math
+class Time:
+    def __init__(self, hour=0, minute=0, second=0):
+        self.hour = hour
+        self.minute = minute
+        self.second = second
 
+    def __str__(self):
+        return f"{self.hour:02}:{self.minute:02}:{self.second:02}"
 
-class Point:
-	def __init__(self, x, y):
-		self.x = x
-		self.y = y
+    def time_to_int(self):
+        minutes = self.hour * 60 + self.minute
+        seconds = minutes * 60 + self.second
+        return seconds
 
+    def int_to_time(self, seconds):
+        minutes, second = divmod(seconds, 60)
+        hour, minute = divmod(minutes, 60)
+        return Time(hour, minute, second)
 
-class Circle:
-	def __init__(self, center, radius):
-		self.center = center
-		self.radius = radius
-
-
-def point_in_circle(circle, point):
-	dist = math.sqrt((point.x - circle.center.x) ** 2 + (point.y - circle.center.y) ** 2)
-	return dist <= circle.radius
+    @staticmethod
+    def mul_time(time, number):
+        total_seconds = round(time.time_to_int() * number)
+        return time.int_to_time(total_seconds)
 
 
 # Create objects
-circle = Circle(Point(150, 100), 75)
-point1 = Point(160, 100)
-point2 = Point(210, 180)
+time1 = Time(1, 30, 0)
+time2 = Time.mul_time(time1, 2)
+time3 = Time.mul_time(time2, 0.5)
 
-# Check if the points are in the circle
-print(point_in_circle(circle, point1))  # Expected output: True
-print(point_in_circle(circle, point2))  # Expected output: False
+# Verify 'mul_time' output
+print(time1)  # Expected output: 01:30:00
+print(time2)  # Expected output: 03:00:00
+print(time3)  # Expected output: 01:30:00            
               </code>
               </pre>
+              </div>
+            </div>
+
+            <hr />
+
+            <div class="exercise">
+              <b>Exercise 17.1:</b>
+              <p>
+                Download the code from this chapter from
+                <a href="https://thinkpython.com/code/Time2.py" target="_blank"
+                  >https://thinkpython.com/code/Time2.py</a
+                >. Change the attributes of <code>Time</code> to be a single
+                integer representing seconds since midnight. Then modify the
+                methods (and the function <code>int_to_time</code>) to work with
+                the new implementation. You should not have to modify the test
+                code in main. When you are done, the output should be the same
+                as before. Solution:
+                <a
+                  href="https://thinkpython.com/code/Time2_soln.py"
+                  target="_blank"
+                  >https://thinkpython.com/code/Time2_soln.py</a
+                >.
+              </p>
+
+              <div class="response">
+                <b>Code:</b>
+                <pre>
+                <code>
+"""This module contains a code example related to
+
+Think Python, 2nd Edition
+by Allen Downey
+http://thinkpython2.com
+
+Copyright 2015 Allen Downey
+
+License: http://creativecommons.org/licenses/by/4.0/
+"""
+
+from __future__ import print_function, division
+
+
+class Time:
+    """Represents the time of day.
+
+    attributes: hour, minute, second
+    """
+
+    def __init__(self, hour=0, minute=0, second=0):
+        """Initializes a time object.
+
+        total_seconds: int or float
+        """
+        self.hour = hour
+        self.minute = minute
+        self.second = second
+        self.total_seconds = hour * 3600 + minute * 60 + second
+
+    def __str__(self):
+        """Returns a string representation of the time."""
+        return '%.2d:%.2d:%.2d' % (self.hour, self.minute, self.second)
+
+    def print_time(self):
+        """Prints a string representation of the time."""
+        print(str(self))
+
+    def time_to_int(self):
+        """Computes the number of seconds since midnight."""
+        return self.total_seconds
+
+    def is_after(self, other):
+        """Returns True if t1 is after t2; false otherwise."""
+        return self.time_to_int() > other.time_to_int()
+
+    def __add__(self, other):
+        """Adds two Time objects or a Time object and a number.
+
+        other: Time object or number of seconds
+        """
+        if isinstance(other, Time):
+            return self.add_time(other)
+        else:
+            return self.increment(other)
+
+    def __radd__(self, other):
+        """Adds two Time objects or a Time object and a number."""
+        return self.__add__(other)
+
+    def add_time(self, other):
+        """Adds two time objects."""
+        assert self.is_valid() and other.is_valid()
+        seconds = self.time_to_int() + other.time_to_int()
+        return int_to_time(seconds)
+
+    def increment(self, seconds):
+        """Returns a new Time that is the sum of this time and seconds."""
+        seconds += self.time_to_int()
+        return int_to_time(seconds)
+
+    def is_valid(self):
+        """Checks whether a Time object satisfies the invariants."""
+        if self.hour < 0 or self.minute < 0 or self.second < 0:
+            return False
+        if self.minute >= 60 or self.second >= 60:
+            return False
+        return True
+
+
+def int_to_time(seconds):
+    """Makes a new Time object.
+
+    seconds: int seconds since midnight.
+    """
+    time = Time(0, 0, seconds)
+    time.total_seconds = seconds
+    minutes, time.second = divmod(seconds, 60)
+    time.hour, time.minute = divmod(minutes, 60)
+    return time
+
+
+def main():
+    start = Time(9, 45, 00)
+    start.print_time()  # Expected output: 09:45:00
+
+    end = start.increment(1337)
+    # end = start.increment(1337, 460)
+    end.print_time()  # Expected output: 10:07:17
+
+    print('Is end after start?')
+    print(end.is_after(start))  # Expected output: True
+
+    print('Using __str__')
+    print(start, end)  # Expected output: 09:45:00 10:07:17
+
+    start = Time(9, 45)
+    duration = Time(1, 35)
+    print(start + duration)  # Expected output: 11:20:00
+    print(start + 1337)  # Expected output: 10:07:17
+    print(1337 + start)  # Expected output: 10:07:17
+
+    print('Example of polymorphism')
+    t1 = Time(7, 43)
+    t2 = Time(7, 41)
+    t3 = Time(7, 37)
+
+    total = sum([t1, t2, t3])
+    print(total)  # Expected output: 23:01:00
+
+
+if __name__ == '__main__':
+    main()                    
+                </code>
+                </pre>
               </div>
             </div>
           </div>
@@ -199,9 +355,10 @@ print(point_in_circle(circle, point2))  # Expected output: False
             <h4>Reflection</h4>
             <ul>
               <li>
-                As an introductory unit, Unit 1 provided a straightforward
-                overview of fundamental concepts. Given my prior exposure to
-                OOP, this unit served as a valuable refresher.
+                Unit 2 presented engaging exercises. Due to the festive season
+                in India, I was unable to complete all coding assignments, but I
+                reviewed the solutions to gain insights. I believe ThinkPython
+                would be a valuable resource for Python novices.
               </li>
             </ul>
           </div>
