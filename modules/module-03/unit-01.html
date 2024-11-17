@@ -190,6 +190,48 @@ print(point_in_circle(circle, point2))  # Expected output: False
               </pre>
               </div>
             </div>
+
+            <hr />
+
+            <div class="exercise">
+              <b>Exercise 15.2:</b>
+              <p>
+                Write a function called <code>draw_circle</code> that takes a
+                Turtle and a Circle and draws the Circle.
+              </p>
+
+              <div class="response">
+                <b>Code:</b>
+                <pre>
+              <code>
+import turtle
+
+
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+
+class Circle:
+    def __init__(self, center, radius):
+        self.center = center
+        self.radius = radius
+
+
+def draw_circle(t, circle):
+    t.circle(circle.radius)
+
+
+# Draw the circle
+t = turtle.Turtle()
+circle = Circle(Point(100, 75), 50)
+draw_circle(t, circle)
+turtle.done()                
+              </code>
+              </pre>
+              </div>
+            </div>
           </div>
         </section>
 
