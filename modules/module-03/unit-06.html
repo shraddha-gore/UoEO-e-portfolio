@@ -74,8 +74,8 @@
               <p>Object Oriented Programming</p>
             </header>
             <header class="major">
-              <h3>Unit 5</h3>
-              <p>More on Classes</p>
+              <h3>Unit 6</h3>
+              <p>Abstract Methods and Interfaces</p>
             </header>
           </div>
         </section>
@@ -86,229 +86,15 @@
             <h4>Learning Outcomes</h4>
             <ul>
               <li>
-                Create a Python program which uses a constructor and abstract
-                class.
+                Describe the ways in which interfaces support Python code
+                design.
               </li>
+              <li>Write a Python program which applies interfaces.</li>
               <li>
-                Describe the concepts of polymorphism, aggregation and
-                composition.
-              </li>
-              <li>
-                Name variables according to the namespace within which they
-                exist.
+                Define the metrics by which an object-oriented program can be
+                assessed.
               </li>
             </ul>
-          </div>
-        </section>
-
-        <!-- Activity -->
-        <section id="activity">
-          <div class="inner">
-            <h4>Pratical Activity - Inheritance</h4>
-            <p>
-              Review chapter 18 of the '<a
-                href="https://greenteapress.com/thinkpython2/thinkpython2.pdf"
-                target="_blank"
-                >Think Python</a
-              >' book to help you better understand this week’s concepts. Use
-              card.py to understand the chapter's contents. Review the code by
-              using the guidance in the book.
-            </p>
-
-            <div class="exercise">
-              <b>Exercise 18.1:</b>
-              <p>
-                For the following program, draw a UML class diagram that shows
-                these classes and the relationships among them.
-              </p>
-
-              <b>Code:</b>
-              <pre>
-              <code>
-class PingPongParent:
-  pass
-
-class Ping(PingPongParent):
-  def __init__(self, pong):
-  self.pong = pong
-
-class Pong(PingPongParent):
-  def __init__(self, pings=None):
-    if pings is None:
-      self.pings = []
-    else:
-      self.pings = pings
-    
-  def add_ping(self, ping):
-    self.pings.append(ping)
-
-pong = Pong()
-ping = Ping(pong)
-pong.add_ping(ping)
-              </code>
-              </pre>
-
-              <div class="response">
-                <div><b>Response:</b></div>
-                <div class="image">
-                  <img
-                    src="../../artefacts/module-03/unit-05-activity-1-class-diagram.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-
-            <hr />
-
-            <div class="exercise">
-              <b>Exercise 18.2:</b>
-              <p>
-                Write a Deck method called <code>deal_hands</code> that takes
-                two parameters, the number of hands and the number of cards per
-                hand. It should create the appropriate number of Hand objects,
-                deal the appropriate number of cards per hand, and return a list
-                of Hands.
-              </p>
-
-              <div class="response">
-                <b>Code:</b>
-                <pre>
-                <code>
-import random
-
-
-class Card:
-    def __init__(self, suit=0, rank=2):
-        self.suit = suit
-        self.rank = rank
-
-    suit_names = ['Clubs', 'Diamonds', 'Hearts', 'Spades']
-    rank_names = [None, 'Ace', '2', '3', '4', '5', '6', '7',
-                  '8', '9', '10', 'Jack', 'Queen', 'King']
-
-    def __str__(self):
-        return '%s of %s' % (Card.rank_names[self.rank],
-                              Card.suit_names[self.suit])
-
-
-class Deck:
-    def __init__(self):
-        self.cards = []
-        for suit in range(4):
-            for rank in range(1, 14):
-                card = Card(suit, rank)
-                self.cards.append(card)
-
-    def __str__(self):
-        res = []
-        for card in self.cards:
-            res.append(str(card))
-        return '\n'.join(res)
-
-    def add_card(self, card):
-        self.cards.append(card)
-
-    def pop_card(self):
-        return self.cards.pop()
-
-    def shuffle(self):
-        random.shuffle(self.cards)
-
-    def deal_hands(self, num_hands, cards_per_hand):
-        if (num_hands * cards_per_hand) > len(self.cards):
-            raise ValueError('Not enough cards')
-        hands = []
-        for i in range(num_hands):
-            hand = Hand(f'Hand {i+1}')
-            for j in range(cards_per_hand):
-                card = self.pop_card()
-                hand.add_card(card)
-            hands.append(hand)
-
-        return hands
-
-
-class Hand(Deck):
-    def __init__(self, label=''):
-        self.cards = []
-        self.label = label
-
-    def __str__(self):
-        return f"{self.label}: {', '.join(str(card) for card in self.cards)}"
-
-    def move_cards(self, hand, num):
-        for i in range(num):
-            hand.add_card(self.pop_card())
-
-
-if __name__ == '__main__':
-    deck = Deck()
-    deck.shuffle()
-    # Expected Output: Deals 3 hands of 5 cards each
-    hands = deck.deal_hands(3, 5)
-    for hand in hands:
-        print(hand)
-                </code>
-                </pre>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Activity -->
-        <section id="activity">
-          <div class="inner">
-            <h4>e-Portfolio Activity: Polymorphism</h4>
-            <p>
-              Write a Python program with polymorphism that is usable within the
-              summative assessment for the humanoid robot.
-            </p>
-
-            <div class="exercise">
-              <div class="response">
-                <b>Code:</b>
-                <pre>
-                <code>
-class Shape:
-  def __init__(self, name):
-      self.name = name
-
-  def calculate_area(self):
-      return 0
-
-  def display_info(self):
-      print(f"{self.name} Area: {self.calculate_area()}")
-
-
-class Circle(Shape):
-  def __init__(self, radius):
-      super().__init__("Circle")
-      self.radius = radius
-
-  def calculate_area(self):
-      return 3.14 * self.radius * self.radius
-
-
-class Square(Shape):
-  def __init__(self, side):
-      super().__init__("Square")
-      self.side = side
-
-  def calculate_area(self):
-      return self.side * self.side
-
-
-if __name__ == '__main__':
-  circle = Circle(4)
-  circle.display_info()
-
-  square = Square(3)
-  square.display_info()              
-                </code>
-                </pre>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -316,17 +102,9 @@ if __name__ == '__main__':
         <section id="reflection">
           <div class="inner">
             <h4>Reflection</h4>
-            <ul>
-              <li>
-                Unit 5 involved numerous activities. I prioritised completing
-                the UML-related tasks, as they will be beneficial for the
-                upcoming Unit 7 assignment.
-              </li>
-              <li>
-                In addition to these activities, I began defining the features
-                of my humanoid robot.
-              </li>
-            </ul>
+            <!-- <ul>
+              <li></li>
+            </ul> -->
           </div>
         </section>
       </div>
