@@ -74,8 +74,8 @@
               <p>Object Oriented Programming</p>
             </header>
             <header class="major">
-              <h3>Unit 7</h3>
-              <p>Debugging / Error Handling, Data Structures and Data Search</p>
+              <h3>Unit 8</h3>
+              <p>Data Structures and Data Search in Practice</p>
             </header>
           </div>
         </section>
@@ -85,100 +85,11 @@
           <div class="inner">
             <h4>Learning Outcomes</h4>
             <ul>
-              <li>Apply Python tools to examine the quality of code.</li>
-              <li>Implement data structures to store data.</li>
-              <li>Implement a search algorithm to explore stored data.</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- Activity -->
-        <section id="activity">
-          <div class="inner">
-            <h4>e-Portfolio Activities</h4>
-            <p>
-              Create a nested dictionary of data on cars within a Car class.
-              Extend the program to work with the dictionary by calling the
-              following methods:
-              <li>items()</li>
-              <li>keys()</li>
-              <li>values()</li>
-            </p>
-
-            <div class="exercise">
-              <div class="response">
-                <b>Code:</b>
-                <pre>
-                <code>
-class Car:
-	def __init__(self):
-		self.car_data = {
-			"Electric": {
-				"Tesla": {"Model": "Model 3", "Year": 2023, "Price": 39999, "Color": "Red", "Fuel": "Electric"},
-				"Nissan": {"Model": "Leaf", "Year": 2022, "Price": 28999, "Color": "Blue", "Fuel": "Electric"},
-			},
-			"Hybrid": {
-				"Toyota": {"Model": "Prius", "Year": 2023, "Price": 25000, "Color": "Green", "Fuel": "Hybrid"},
-				"Honda": {"Model": "Insight", "Year": 2022, "Price": 23000, "Color": "White", "Fuel": "Hybrid"},
-			},
-			"Luxury": {
-				"BMW": {"Model": "X5", "Year": 2023, "Price": 60000, "Color": "Black", "Fuel": "Gasoline"},
-				"Audi": {"Model": "Q7", "Year": 2023, "Price": 62000, "Color": "Silver", "Fuel": "Diesel"},
-			}
-		}
-
-	def items(self):
-		for category, brands in self.car_data.items():
-			print(f"{category}: {brands}")
-
-	def keys(self):
-		for key in self.car_data.keys():
-			print(key)
-
-	def values(self):
-		for value in self.car_data.values():
-			print(value)
-				
-				
-# Creating an object of the Car class
-car = Car()
-
-# Call object methods to view car data
-print("All categories and brands:")
-car.items()
-print()
-
-print("All categories:")
-car.keys()
-print()
-
-print("All brands:")
-car.values()
-print()
-                </code>
-                </pre>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Assessment -->
-        <section id="assessment">
-          <div class="inner">
-            <h4>Summative Assessment: System Design</h4>
-            <ul>
               <li>
-                The assignment is divided into two parts: a design document for
-                a humanoid robot, due in this unit, and its practical
-                implementation, due in Unit 11. A 1,000-word design document was
-                submitted, outlining the features, a general design, and UML
-                diagrams. Link to the design document:
-                <a
-                  href="../../artefacts/module-03/unit-07-assignment.pdf"
-                  target="_blank"
-                  >here</a
-                >
+                Describe the scenarios in which each of the set operations will
+                be applicable in relation to the driverless car scenario.
               </li>
+              <li>Implement a linear data search technique.</li>
             </ul>
           </div>
         </section>
@@ -187,13 +98,10 @@ print()
         <section id="reflection">
           <div class="inner">
             <h4>Reflection</h4>
-            <ul>
+            <!-- <ul>
               <li>
-                The design document, developed in previous units, was refined
-                and finalised. Commencing work early on the design document
-                proved to be beneficial.
               </li>
-            </ul>
+            </ul> -->
           </div>
         </section>
       </div>
