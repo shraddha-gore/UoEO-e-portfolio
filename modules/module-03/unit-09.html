@@ -74,8 +74,8 @@
               <p>Object Oriented Programming</p>
             </header>
             <header class="major">
-              <h3>Unit 8</h3>
-              <p>Data Structures and Data Search in Practice</p>
+              <h3>Unit 9</h3>
+              <p>Packaging and Testing</p>
             </header>
           </div>
         </section>
@@ -85,88 +85,12 @@
           <div class="inner">
             <h4>Learning Outcomes</h4>
             <ul>
+              <li>Appropriately package a Python code development.</li>
+              <li>Adequately and effectively document your code.</li>
               <li>
-                Describe the scenarios in which each of the set operations will
-                be applicable in relation to the driverless car scenario.
+                Use the tools available in Python to test the quality of code.
               </li>
-              <li>Implement a linear data search technique.</li>
             </ul>
-          </div>
-        </section>
-
-        <!-- Activity -->
-        <section id="activity">
-          <div class="inner">
-            <h4>Pratical Activity - Recursion and Polymorphism</h4>
-            <p>
-              Review Chapter 5 and Section 17.9 of '<a
-                href="https://greenteapress.com/thinkpython2/thinkpython2.pdf"
-                target="_blank"
-                >Think Python</a
-              >' to help you understand this week's concepts. You can discuss
-              your work with your tutor and save your results in your
-              e-portfolio.
-            </p>
-
-            <div class="exercise">
-              <b>Exercise 5.3:</b>
-              <p>
-                If you are given three sticks, you may or may not be able to
-                arrange them in a triangle. For example, if one of the sticks is
-                12 inches long and the other two are one inch long, you will not
-                be able to get the short sticks to meet in the middle. For any
-                three lengths, there is a simple test to see if it is possible
-                to form a triangle:
-                <br />
-                <i>
-                  If any of the three lengths is greater than the sum of the
-                  other two, then you cannot form a triangle. Otherwise, you
-                  can. (If the sum of two lengths equals the third, they form
-                  what is called a “degenerate” triangle.)</i
-                >
-              </p>
-              <ol>
-                <li>
-                  Write a function named is_triangle that takes three integers
-                  as arguments, and that prints either “Yes” or “No”, depending
-                  on whether you can or cannot form a triangle from sticks with
-                  the given lengths.
-                </li>
-                <li>
-                  Write a function that prompts the user to input three stick
-                  lengths, converts them to integers, and uses is_triangle to
-                  check whether sticks with the given lengths can form a
-                  triangle.
-                </li>
-              </ol>
-
-              <div class="response">
-                <b>Code:</b>
-                <pre>
-                <code>
-def is_triangle(a, b, c):
-    if ((a + b) > c) and ((a + c) > b) and ((b + c) > a):
-        print("Yes")
-    else:
-        print("No")
-                
-                
-def is_triangle_user_input():
-    a = int(input("Enter the first stick's length: "))
-    b = int(input("Enter the second stick's length: "))
-    c = int(input("Enter the third stick's length: "))
-
-    is_triangle(a, b, c)
-
-
-# Check if triangle can be formed
-is_triangle(10, 7, 5)   # Yes
-is_triangle(3, 1, 2)    # No
-is_triangle_user_input()                
-                </code>
-                </pre>
-              </div>
-            </div>
           </div>
         </section>
 
