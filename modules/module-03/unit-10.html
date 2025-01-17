@@ -97,14 +97,208 @@
           </div>
         </section>
 
+        <!-- Seminar -->
+        <section id="seminar">
+          <div class="inner">
+            <h4>Unit 10 Seminar: Packaging and Testing</h4>
+
+            <div class="exercise">
+              <b>Activity 1:</b>
+              <p>
+                Run the following code using pylint and identify the errors.
+              </p>
+
+              <b>Code:</b>
+              <pre>
+                <code>
+def factorial (x)
+    if x == 1:
+        return 1
+
+    else:   
+        return (x * factorial(x-1))
+
+num = 3
+print("The factorial of", num, "is", factorial(num))  
+                </code>
+                </pre>
+
+              <div class="response">
+                <div><b>Response:</b></div>
+                <ol>
+                  <li>
+                    The function definition
+                    <code>def factorial (x)</code> contains an extra space
+                    between the function name and an argument. The correct
+                    syntax is <code>def factorial(x)</code>.
+                  </li>
+                  <li>
+                    The function definition lacks a colon at the end of the
+                    line. The correct syntax is <code>def factorial(x):</code>.
+                  </li>
+                  <li>
+                    The function does not currently handle the base cases: x = 0
+                    and x < 0. These cases require special handling to ensure
+                    correct factorial calculations.
+                  </li>
+                </ol>
+                <div>
+                  <b>Corrected Code:</b>
+                  <pre>
+                <code>
+def factorial(x):
+if x == 0 or x == 1:
+    return 1
+
+if x < 0:
+    raise ValueError("Factorial is not defined for negative numbers")
+
+else:
+    return (x * factorial(x-1))
+                
+                
+num = 3
+print("The factorial of", num, "is", factorial(num))
+                </code>
+                </pre>
+                </div>
+              </div>
+            </div>
+
+            <hr />
+
+            <div class="exercise">
+              <b>Activity 2:</b>
+              <p>
+                In ‘Packaging & Testing’ (unit 9), we examined the use of
+                documentation to support code developments. Add appropriate
+                commenting and documentation for the code below.
+              </p>
+
+              <b>Code:</b>
+              <pre>
+                  <code>
+def add(x, y): 
+return x + y 
+def subtract(x, y): 
+return x - y 
+def multiply(x, y): 
+return x * y 
+def divide(x, y): 
+return x / y 
+print("Select operation.") 
+print("1.Add") 
+print("2.Subtract") 
+print("3.Multiply") 
+print("4.Divide") 
+while True: 
+choice = input("Enter choice(1/2/3/4): ")  
+if choice in ('1', '2', '3', '4'): 
+num1 = float(input("Enter first number: ")) 
+num2 = float(input("Enter second number: ")) 
+if choice == '1': print(num1, "+", num2, "=", add(num1, num2)) 
+elif choice == '2': print(num1, "-", num2, "=", subtract(num1, num2)) 
+elif choice == '3': print(num1, "*", num2, "=", multiply(num1, num2)) 
+elif choice == '4': print(num1, "/", num2, "=", divide(num1, num2)) 
+    break the while loop if answer is no next_calculation = input("Let's do next calculation? (yes/no): ") 
+if next_calculation == "no": 
+break 
+else: print("Invalid Input") 
+                  </code>
+                  </pre>
+
+              <div class="response">
+                <div>
+                  <b>Response:</b>
+                  <pre>
+                  <code>
+def add(x, y):
+    """Returns the sum of x and y."""
+    return x + y
+
+
+def subtract(x, y):
+    """Returns the difference of x and y."""
+    return x - y
+
+
+def multiply(x, y):
+    """Returns the product of x and y."""
+    return x * y
+
+
+def divide(x, y):
+    """Returns the quotient of x divided by y."""
+    if y == 0:
+        return "Error! Division by zero."
+    return x / y
+                
+                
+# Display operations menu
+print("Select operation:")
+print("1. Add")
+print("2. Subtract")
+print("3. Multiply")
+print("4. Divide")
+                
+while True:
+    # Prompt the user to choose an operation
+    choice = input("Enter choice (1/2/3/4): ")
+
+    # Input validation
+    if choice in ('1', '2', '3', '4'):
+        try:
+            # Input two numbers for the calculation
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+        except ValueError:
+            # Handle invalid value
+            print("Invalid input! Please enter numeric values.")
+            continue
+
+        # Perform the selected operation
+        if choice == '1':
+            print(f"{num1} + {num2} = {add(num1, num2)}")
+        elif choice == '2':
+            print(f"{num1} - {num2} = {subtract(num1, num2)}")
+        elif choice == '3':
+            print(f"{num1} * {num2} = {multiply(num1, num2)}")
+        elif choice == '4':
+            result = divide(num1, num2)
+            print(f"{num1} / {num2} = {result}")
+
+        # Ask the user if they want to perform another calculation
+        next_calculation = input(
+            "Do you want to perform another calculation? (yes/no): ").lower()
+        if next_calculation != "yes":
+            print("Thank you for using the calculator. Goodbye!")
+            break
+    else:
+        # Handle invalid operation choice
+        print("Invalid Input! Please choose a valid operation (1/2/3/4).")                 
+                  </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- Reflection -->
         <section id="reflection">
           <div class="inner">
             <h4>Reflection</h4>
-            <!-- <ul>
+            <ul>
               <li>
+                My primary focus was on completing the Unit 11 summative
+                assessment. Prior to commencing coding, I reviewed the tutor's
+                feedback on the design document and the Unit 10 seminar
+                recording to gain a thorough understanding of the assessment
+                requirements and deliverables. I then dedicated the following
+                days to coding, ultimately completing and submitting the
+                assessment.
               </li>
-            </ul> -->
+            </ul>
           </div>
         </section>
       </div>

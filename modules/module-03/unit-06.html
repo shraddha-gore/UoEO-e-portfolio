@@ -98,6 +98,93 @@
           </div>
         </section>
 
+        <!-- Seminar -->
+        <section id="seminar">
+          <div class="inner">
+            <h4>Unit 6 Seminar: Abstraction in Object Oriented Programming</h4>
+            <p>
+              Develop a Python program which has three abstract methods and one
+              subclass which allows a user to perform banking operations.
+            </p>
+
+            <div class="exercise">
+              <div class="response">
+                <b>Code:</b>
+                <pre>
+                  <code>
+from abc import ABC, abstractmethod
+
+# Abstract base class
+
+
+class BankAccount(ABC):
+    def __init__(self, account_holder, balance=0.0):
+        self.account_holder = account_holder
+        self.balance = balance
+
+    @abstractmethod
+    def deposit(self, amount):
+        pass
+
+    @abstractmethod
+    def withdraw(self, amount):
+        pass
+
+    @abstractmethod
+    def check_account_details(self):
+        pass
+
+# Subclass for a savings account
+
+
+class SavingsAccount(BankAccount):
+    def __init__(self, account_holder, balance=0.0):
+        super().__init__(account_holder, balance)
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.balance += amount
+            print(f"Deposited ${amount:.2f}. New balance: ${self.balance:.2f}")
+        else:
+            print("Deposit amount must be positive.")
+
+    def withdraw(self, amount):
+        if amount > 0:
+            if self.balance - amount >= 0:
+                self.balance -= amount
+                print(f"Withdrew ${amount:.2f}. New balance: ${
+                        self.balance:.2f}")
+            else:
+                print("Insufficient funds. Cannot go below zero.")
+        else:
+            print("Withdrawal amount must be positive.")
+
+    def check_account_details(self):
+        print(f"Account Holder: {self.account_holder}")
+        print(f"Current Balance: ${self.balance:.2f}")
+                    
+                    
+# Main program
+
+if __name__ == "__main__":
+    # Create a savings account with an initial balance
+    account = SavingsAccount(account_holder="James Hatsun", balance=500.0)
+
+    # Positive case
+    account.check_account_details()
+    account.deposit(200)
+    account.withdraw(150)
+
+    # Negative case - Insufficient funds
+    account.withdraw(600)
+    account.check_account_details()                    
+                  </code>
+                  </pre>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- Reflection -->
         <section id="reflection">
           <div class="inner">
@@ -106,6 +193,11 @@
               <li>
                 In unit 6, I prioritised working on the summative assessment of
                 Unit 7. A draft of this design document is now complete.
+              </li>
+              <li>
+                Prior to the module closure, to solidify my understanding of
+                OOPS, I wrote a small program to apply the principles of
+                abstraction.
               </li>
             </ul>
           </div>
