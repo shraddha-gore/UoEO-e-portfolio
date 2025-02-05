@@ -51,8 +51,8 @@
           <li><a href="../../index.html">Home</a></li>
           <li><a href="../module-01/module-page.html">Module 1</a></li>
           <li><a href="../module-02/module-page.html">Module 2</a></li>
-          <li><a href="module-page.html">Module 3</a></li>
-          <li><a href="../module-04/module-page.html">Module 4</a></li>
+          <li><a href="../module-03/module-page.html">Module 3</a></li>
+          <li><a href="module-page.html">Module 4</a></li>
           <!-- <li><a href="landing.html">Landing</a></li> -->
           <!-- <li><a href="generic.html">Generic</a></li> -->
           <!-- <li><a href="elements.html">Elements</a></li> -->
@@ -71,15 +71,12 @@
         <section id="overview">
           <div class="inner">
             <header class="major">
-              <h1>Module 3</h1>
-              <p>Object Oriented Programming</p>
+              <h1>Module 4</h1>
+              <p>Software Engineering Project Management</p>
             </header>
             <header class="major">
-              <h3>Unit 1</h3>
-              <p>
-                An Introduction to Python Programming and the OO Programming
-                Paradigm
-              </p>
+              <h3>Unit 2</h3>
+              <p>Why Projects Fail and Gathering Requirements Exercise</p>
             </header>
           </div>
         </section>
@@ -89,150 +86,9 @@
           <div class="inner">
             <h4>Learning Outcomes</h4>
             <ul>
-              <li>
-                Describe the major features of an object-oriented program, in
-                the sense of having abstract classes, applying inheritance,
-                using encapsulation, and including polymorphism.
-              </li>
-              <li>Define a Python class.</li>
-              <li>
-                Define a variety of data types to variables in a Python program
-                and adapt the access modifier applied to each.
-              </li>
+              <li>Suggest mitigations for common project failures.</li>
+              <li>Carry out requirements gathering using Gherkin.</li>
             </ul>
-          </div>
-        </section>
-
-        <!-- e-Portfolio Component -->
-        <section id="e-portfolio-component">
-          <div class="inner">
-            <h4>
-              e-Portfolio Component: Collaborative Discussion 1: Factors which
-              Influence Reusability
-            </h4>
-            <ul>
-              <li>
-                Based on the article by Padhy et al. (2018), a re-prioritized
-                list of factors influencing reusability in object-oriented
-                software was shared along with reasoning. Link to the discussion
-                forum's post:
-                <a
-                  href="https://www.my-course.co.uk/mod/forum/discuss.php?d=261146"
-                  target="_blank"
-                  >here</a
-                >
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- Activity -->
-        <section id="activity">
-          <div class="inner">
-            <h4>Pratical Activity - Classes and Objects</h4>
-            <p>
-              Take a look at chapter 15 of '<a
-                href="https://greenteapress.com/thinkpython2/thinkpython2.pdf"
-                target="_blank"
-                >Think Python</a
-              >', from page 147. Also, take a look at '<a
-                href="https://github.com/AllenDowney/ThinkPython2/blob/master/code/Point1.py"
-                target="_blank"
-                >Point1.py</a
-              >' from GitHub. Work through the guidance and experiment with the
-              code in PyCharm.
-            </p>
-
-            <div class="exercise">
-              <b>Exercise 15.1:</b>
-              <p>
-                Write a definition for a class named Circle with attributes
-                center and radius, where center is a Point object and radius is
-                a number.<br />
-                Instantiate a Circle object that represents a circle with its
-                center at (150, 100) and radius 75.<br />Write a function named
-                point_in_circle that takes a Circle and a Point and returns True
-                if the Point lies in or on the boundary of the circle.
-              </p>
-
-              <div class="response">
-                <b>Code:</b>
-                <pre>
-              <code>
-import math
-
-
-class Point:
-	def __init__(self, x, y):
-		self.x = x
-		self.y = y
-
-
-class Circle:
-	def __init__(self, center, radius):
-		self.center = center
-		self.radius = radius
-
-
-def point_in_circle(circle, point):
-	dist = math.sqrt((point.x - circle.center.x) ** 2 + (point.y - circle.center.y) ** 2)
-	return dist <= circle.radius
-
-
-# Create objects
-circle = Circle(Point(150, 100), 75)
-point1 = Point(160, 100)
-point2 = Point(210, 180)
-
-# Check if the points are in the circle
-print(point_in_circle(circle, point1))  # Expected output: True
-print(point_in_circle(circle, point2))  # Expected output: False
-              </code>
-              </pre>
-              </div>
-            </div>
-
-            <hr />
-
-            <div class="exercise">
-              <b>Exercise 15.2:</b>
-              <p>
-                Write a function called <code>draw_circle</code> that takes a
-                Turtle and a Circle and draws the Circle.
-              </p>
-
-              <div class="response">
-                <b>Code:</b>
-                <pre>
-              <code>
-import turtle
-
-
-class Point:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-
-
-class Circle:
-    def __init__(self, center, radius):
-        self.center = center
-        self.radius = radius
-
-
-def draw_circle(t, circle):
-    t.circle(circle.radius)
-
-
-# Draw the circle
-t = turtle.Turtle()
-circle = Circle(Point(100, 75), 50)
-draw_circle(t, circle)
-turtle.done()                
-              </code>
-              </pre>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -241,11 +97,7 @@ turtle.done()
           <div class="inner">
             <h4>Reflection</h4>
             <ul>
-              <li>
-                As an introductory unit, Unit 1 provided a straightforward
-                overview of fundamental concepts. Given my prior exposure to
-                OOP, this unit served as a valuable refresher.
-              </li>
+              <!-- <li></li> -->
             </ul>
           </div>
         </section>
