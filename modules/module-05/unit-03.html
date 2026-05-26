@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Shraddha's UoEO e-Portfolio</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta
+      property="og:url"
+      content="https://shraddha-gore.github.io/UoEO-e-portfolio/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Shraddha's UoEO e-Portfolio" />
+    <meta
+      property="og:description"
+      content="Learn about Shraddha's journey of pursuing MSc Computer Science from the University of Essex Online."
+    />
+    <meta property="og:image" content="../../images/sg-logo-color.png" />
+    <link
+      rel="icon"
+      href="../../images/sg-logo-color.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <noscript>
+      <link rel="stylesheet" href="../../assets/css/noscript.css" />
+    </noscript>
+  </head>
+
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="alt style2">
+        <a href="../../index.html" class="logo"><strong>Home</strong></a>
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../module-01/module-page.html">Module 1</a></li>
+          <li><a href="../module-02/module-page.html">Module 2</a></li>
+          <li><a href="../module-03/module-page.html">Module 3</a></li>
+          <li><a href="../module-04/module-page.html">Module 4</a></li>
+          <li><a href="module-page.html">Module 5</a></li>
+          <li><a href="../module-06/module-page.html">Module 6</a></li>
+          <li><a href="../module-07/module-page.html">Module 7</a></li>
+          <li><a href="../module-08/module-page.html">Module 8</a></li>
+          <!-- <li><a href="landing.html">Landing</a></li> -->
+          <!-- <li><a href="generic.html">Generic</a></li> -->
+          <!-- <li><a href="elements.html">Elements</a></li> -->
+        </ul>
+        <!--
+            <ul class="actions stacked">
+                <li><a href="#" class="button primary fit">Get Started</a></li>
+                <li><a href="#" class="button fit">Log In</a></li>
+            </ul>
+            -->
+      </nav>
+
+      <!-- Main -->
+      <div id="main" class="alt">
+        <!-- Overview -->
+        <section id="overview">
+          <div class="inner">
+            <header class="major">
+              <h1>Module 5</h1>
+              <p>Network Security</p>
+            </header>
+            <header class="major">
+              <h3>Unit 3</h3>
+              <p>Vulnerability Assessments</p>
+            </header>
+          </div>
+        </section>
+
+        <!-- Learning Outcomes -->
+        <section id="outcomes">
+          <div class="inner">
+            <h4>Learning Outcomes</h4>
+            <ul>
+              <li>
+                Select and explain which assessment regime to use based on the
+                type and size of the target business.
+              </li>
+              <li>
+                Utilise open-source scanning and testing tools to perform
+                vulnerability tests and scans.
+              </li>
+              <li>
+                Analyse scanning results and make recommendations to mitigate
+                vulnerabilities.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Activity -->
+        <section id="activity">
+          <div class="inner">
+            <h4>e-Portfolio Activity: Scanning Activity</h4>
+            <p>
+              Using the website(s) assigned to you in Unit 1, carry out the
+              following exercises and answer the questions listed below. Perform
+              a basic scan using standard tools such as traceroute, dig and
+              nslookup. Use these basic tools and make a list that details the
+              following information:
+            </p>
+
+            <div class="response">
+              <div><b>Response:</b></div>
+
+              <div class="question-section">
+                <h4>
+                  1. How many hops from your machine to your assigned website?
+                  Which step causes the biggest delay in the route? What is the
+                  average duration of that delay?
+                </h4>
+                <div>
+                  <div class="image">
+                    <img
+                      src="../../artefacts/module-05/unit-03-activity-1-traceroute.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    At least 6 hops before the trace was blocked or dropped.
+                  </li>
+                  <li>
+                    The biggest delay is at hop 6: IP
+                    <code>116.119.44.136</code>. The average delay there is
+                    215.5 ms.
+                  </li>
+                  <li>
+                    Source:
+                    <a
+                      href="https://tools.keycdn.com/traceroute"
+                      target="_blank"
+                      >KeyCDN</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="question-section">
+                <h4>2. What are the main nameservers for the website?</h4>
+                <ul>
+                  <li>ns1.softwaregrp.com: IP <code>130.57.12.53</code></li>
+                  <li>ns2.softwaregrp.com: IP <code>143.186.121.53</code></li>
+                  <li>ns3.softwaregrp.com: IP <code>192.31.114.53</code></li>
+                  <li>
+                    Source:
+                    <a
+                      href="https://who.is/whois/webappsecurity.com"
+                      target="_blank"
+                      >WHOIS Domain Lookup</a
+                    >
+                  </li>
+                </ul>
+                <p></p>
+              </div>
+
+              <div class="question-section">
+                <h4>3. Who is the registered contact?</h4>
+                <ul>
+                  <li>
+                    The domain is registered through SafeNames Ltd., and the
+                    registrant organisation is listed as Open Text Corporation.
+                  </li>
+                  <li>
+                    Source:
+                    <a
+                      href="https://who.is/whois/webappsecurity.com"
+                      target="_blank"
+                      >WHOIS Domain Lookup</a
+                    >
+                  </li>
+                </ul>
+                <p></p>
+              </div>
+
+              <div class="question-section">
+                <h4>4. What is the MX record for the website?</h4>
+                <ul>
+                  <li>The domain does not have any MX records.</li>
+                  <li>
+                    Source:
+                    <a
+                      href="https://who.is/whois/webappsecurity.com"
+                      target="_blank"
+                      >WHOIS Domain Lookup</a
+                    >
+                  </li>
+                </ul>
+                <p></p>
+              </div>
+
+              <div class="question-section">
+                <h4>5. Where is the website hosted?</h4>
+                <ul>
+                  <li>
+                    The hosting server is located in Ashburn, Virginia, USA
+                  </li>
+                  <li>
+                    Source:
+                    <a
+                      href="https://gridinsoft.com/online-virus-scanner/url/zero-webappsecurity-com"
+                      target="_blank"
+                      >Gridinsoft LLC</a
+                    >
+                  </li>
+                </ul>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Assessment -->
+        <section id="assessment">
+          <div class="inner">
+            <h4>
+              Vulnerability Audit and Assessment - Baseline Analysis and Plan
+            </h4>
+            <ul>
+              <li>
+                An initial analysis of
+                <a href="http://zero.webappsecurity.com/" target="_blank"
+                  >Zero Bank</a
+                >
+                was conducted, and a 600-word analytical document was submitted.
+                This document included key sections outlining potential
+                vulnerabilities within the website, recommending several
+                vulnerability assessment tools, and proposing a tentative
+                timeline for future audits. Link to the analytical document:
+                <a
+                  href="../../artefacts/module-05/unit-03-assignment.pdf"
+                  target="_blank"
+                  >here</a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Reflection -->
+        <section id="reflection">
+          <div class="inner">
+            <h4>Reflection</h4>
+            <ul>
+              <li>
+                This unit featured two key activities: a scanning activity and
+                an assessment, both of which are relevant to the Unit 6
+                assessment. I utilised online vulnerability analysis tools for
+                both tasks to avoid impacting my personal system.
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- Contact -->
+      <section id="contact">
+        <div class="inner">
+          <section>
+            <form method="post" action="#">
+              <div class="fields">
+                <div class="field half">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" />
+                </div>
+                <div class="field half">
+                  <label for="email">Email</label>
+                  <input type="text" name="email" id="email" />
+                </div>
+                <div class="field">
+                  <label for="message">Message</label>
+                  <textarea name="message" id="message" rows="6"></textarea>
+                </div>
+              </div>
+              <ul class="actions">
+                <li>
+                  <input type="submit" value="Send Message" class="primary" />
+                </li>
+                <li><input type="reset" value="Clear" /></li>
+              </ul>
+            </form>
+          </section>
+          <section class="split">
+            <section>
+              <div class="contact-method">
+                <span class="icon solid alt fa-envelope"></span>
+                <h3>Email</h3>
+                <a href="#">sg24002@essex.ac.uk</a>
+              </div>
+            </section>
+            <section>
+              <div class="contact-method">
+                <span class="icon solid alt fa-phone"></span>
+                <h3>Phone</h3>
+                <span>-</span>
+              </div>
+            </section>
+            <section>
+              <div class="contact-method">
+                <span class="icon solid alt fa-home"></span>
+                <h3>Address</h3>
+                <span>Mumbai, India</span>
+              </div>
+            </section>
+          </section>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <ul class="icons">
+            <!--
+					<li><a href="#" class="icon brands alt fa-twitter" target="_blank"><span
+								class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f" target="_blank"><span
+								class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-instagram" target="_blank"><span
+								class="label">Instagram</span></a></li>
+					-->
+            <li>
+              <a
+                href="https://github.com/shraddha-gore/"
+                class="icon brands alt fa-github"
+                target="_blank"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/shraddhagore/"
+                class="icon brands alt fa-linkedin-in"
+                target="_blank"
+                ><span class="label">LinkedIn</span></a
+              >
+            </li>
+          </ul>
+          <ul class="copyright">
+            <li>&copy; Untitled</li>
+            <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../../assets/js/jquery.scrollex.min.js"></script>
+    <script src="../../assets/js/browser.min.js"></script>
+    <script src="../../assets/js/breakpoints.min.js"></script>
+    <script src="../../assets/js/util.js"></script>
+    <script src="../../assets/js/main.js"></script>
+  </body>
+</html>

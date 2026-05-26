@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Shraddha's UoEO e-Portfolio</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta
+      property="og:url"
+      content="https://shraddha-gore.github.io/UoEO-e-portfolio/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Shraddha's UoEO e-Portfolio" />
+    <meta
+      property="og:description"
+      content="Learn about Shraddha's journey of pursuing MSc Computer Science from the University of Essex Online."
+    />
+    <meta property="og:image" content="../../images/sg-logo-color.png" />
+    <link
+      rel="icon"
+      href="../../images/sg-logo-color.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <noscript>
+      <link rel="stylesheet" href="../../assets/css/noscript.css" />
+    </noscript>
+  </head>
+
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="alt style2">
+        <a href="../../index.html" class="logo"><strong>Home</strong></a>
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../module-01/module-page.html">Module 1</a></li>
+          <li><a href="../module-02/module-page.html">Module 2</a></li>
+          <li><a href="module-page.html">Module 3</a></li>
+          <li><a href="../module-04/module-page.html">Module 4</a></li>
+          <li><a href="../module-05/module-page.html">Module 5</a></li>
+          <li><a href="../module-06/module-page.html">Module 6</a></li>
+          <li><a href="../module-07/module-page.html">Module 7</a></li>
+          <li><a href="../module-08/module-page.html">Module 8</a></li>
+          <!-- <li><a href="landing.html">Landing</a></li> -->
+          <!-- <li><a href="generic.html">Generic</a></li> -->
+          <!-- <li><a href="elements.html">Elements</a></li> -->
+        </ul>
+        <!--
+            <ul class="actions stacked">
+                <li><a href="#" class="button primary fit">Get Started</a></li>
+                <li><a href="#" class="button fit">Log In</a></li>
+            </ul>
+            -->
+      </nav>
+
+      <!-- Main -->
+      <div id="main" class="alt">
+        <!-- Overview -->
+        <section id="overview">
+          <div class="inner">
+            <header class="major">
+              <h1>Module 3</h1>
+              <p>Object Oriented Programming</p>
+            </header>
+            <header class="major">
+              <h3>Unit 10</h3>
+              <p>Testing Code in Practice</p>
+            </header>
+          </div>
+        </section>
+
+        <!-- Learning Outcomes -->
+        <section id="outcomes">
+          <div class="inner">
+            <h4>Learning Outcomes</h4>
+            <ul>
+              <li>
+                Write unit tests to ensure correct functionality of Python code.
+              </li>
+              <li>
+                Run pylint against a Python script to demonstrate stylistic
+                correctness.
+              </li>
+              <li>Document code for release to stakeholders.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Seminar -->
+        <section id="seminar">
+          <div class="inner">
+            <h4>Unit 10 Seminar: Packaging and Testing</h4>
+
+            <div class="exercise">
+              <b>Activity 1:</b>
+              <p>
+                Run the following code using pylint and identify the errors.
+              </p>
+
+              <b>Code:</b>
+              <pre>
+                <code>
+def factorial (x)
+    if x == 1:
+        return 1
+
+    else:   
+        return (x * factorial(x-1))
+
+num = 3
+print("The factorial of", num, "is", factorial(num))  
+                </code>
+                </pre>
+
+              <div class="response">
+                <div><b>Response:</b></div>
+                <ol>
+                  <li>
+                    The function definition
+                    <code>def factorial (x)</code> contains an extra space
+                    between the function name and an argument. The correct
+                    syntax is <code>def factorial(x)</code>.
+                  </li>
+                  <li>
+                    The function definition lacks a colon at the end of the
+                    line. The correct syntax is <code>def factorial(x):</code>.
+                  </li>
+                  <li>
+                    The function does not currently handle the base cases: x = 0
+                    and x < 0. These cases require special handling to ensure
+                    correct factorial calculations.
+                  </li>
+                </ol>
+                <div>
+                  <b>Corrected Code:</b>
+                  <pre>
+                <code>
+def factorial(x):
+if x == 0 or x == 1:
+    return 1
+
+if x < 0:
+    raise ValueError("Factorial is not defined for negative numbers")
+
+else:
+    return (x * factorial(x-1))
+                
+                
+num = 3
+print("The factorial of", num, "is", factorial(num))
+                </code>
+                </pre>
+                </div>
+              </div>
+            </div>
+
+            <hr />
+
+            <div class="exercise">
+              <b>Activity 2:</b>
+              <p>
+                In ‘Packaging & Testing’ (unit 9), we examined the use of
+                documentation to support code developments. Add appropriate
+                commenting and documentation for the code below.
+              </p>
+
+              <b>Code:</b>
+              <pre>
+                  <code>
+def add(x, y): 
+return x + y 
+def subtract(x, y): 
+return x - y 
+def multiply(x, y): 
+return x * y 
+def divide(x, y): 
+return x / y 
+print("Select operation.") 
+print("1.Add") 
+print("2.Subtract") 
+print("3.Multiply") 
+print("4.Divide") 
+while True: 
+choice = input("Enter choice(1/2/3/4): ")  
+if choice in ('1', '2', '3', '4'): 
+num1 = float(input("Enter first number: ")) 
+num2 = float(input("Enter second number: ")) 
+if choice == '1': print(num1, "+", num2, "=", add(num1, num2)) 
+elif choice == '2': print(num1, "-", num2, "=", subtract(num1, num2)) 
+elif choice == '3': print(num1, "*", num2, "=", multiply(num1, num2)) 
+elif choice == '4': print(num1, "/", num2, "=", divide(num1, num2)) 
+    break the while loop if answer is no next_calculation = input("Let's do next calculation? (yes/no): ") 
+if next_calculation == "no": 
+break 
+else: print("Invalid Input") 
+                  </code>
+                  </pre>
+
+              <div class="response">
+                <div>
+                  <b>Response:</b>
+                  <pre>
+                  <code>
+def add(x, y):
+    """Returns the sum of x and y."""
+    return x + y
+
+
+def subtract(x, y):
+    """Returns the difference of x and y."""
+    return x - y
+
+
+def multiply(x, y):
+    """Returns the product of x and y."""
+    return x * y
+
+
+def divide(x, y):
+    """Returns the quotient of x divided by y."""
+    if y == 0:
+        return "Error! Division by zero."
+    return x / y
+                
+                
+# Display operations menu
+print("Select operation:")
+print("1. Add")
+print("2. Subtract")
+print("3. Multiply")
+print("4. Divide")
+                
+while True:
+    # Prompt the user to choose an operation
+    choice = input("Enter choice (1/2/3/4): ")
+
+    # Input validation
+    if choice in ('1', '2', '3', '4'):
+        try:
+            # Input two numbers for the calculation
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+        except ValueError:
+            # Handle invalid value
+            print("Invalid input! Please enter numeric values.")
+            continue
+
+        # Perform the selected operation
+        if choice == '1':
+            print(f"{num1} + {num2} = {add(num1, num2)}")
+        elif choice == '2':
+            print(f"{num1} - {num2} = {subtract(num1, num2)}")
+        elif choice == '3':
+            print(f"{num1} * {num2} = {multiply(num1, num2)}")
+        elif choice == '4':
+            result = divide(num1, num2)
+            print(f"{num1} / {num2} = {result}")
+
+        # Ask the user if they want to perform another calculation
+        next_calculation = input(
+            "Do you want to perform another calculation? (yes/no): ").lower()
+        if next_calculation != "yes":
+            print("Thank you for using the calculator. Goodbye!")
+            break
+    else:
+        # Handle invalid operation choice
+        print("Invalid Input! Please choose a valid operation (1/2/3/4).")                 
+                  </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Reflection -->
+        <section id="reflection">
+          <div class="inner">
+            <h4>Reflection</h4>
+            <ul>
+              <li>
+                My primary focus was on completing the Unit 11 summative
+                assessment. Prior to commencing coding, I reviewed the tutor's
+                feedback on the design document and the Unit 10 seminar
+                recording to gain a thorough understanding of the assessment
+                requirements and deliverables. I then dedicated the following
+                days to coding, ultimately completing and submitting the
+                assessment.
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- Contact -->
+      <section id="contact">
+        <div class="inner">
+          <section>
+            <form method="post" action="#">
+              <div class="fields">
+                <div class="field half">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" />
+                </div>
+                <div class="field half">
+                  <label for="email">Email</label>
+                  <input type="text" name="email" id="email" />
+                </div>
+                <div class="field">
+                  <label for="message">Message</label>
+                  <textarea name="message" id="message" rows="6"></textarea>
+                </div>
+              </div>
+              <ul class="actions">
+                <li>
+                  <input type="submit" value="Send Message" class="primary" />
+                </li>
+                <li><input type="reset" value="Clear" /></li>
+              </ul>
+            </form>
+          </section>
+          <section class="split">
+            <section>
+              <div class="contact-method">
+                <span class="icon solid alt fa-envelope"></span>
+                <h3>Email</h3>
+                <a href="#">sg24002@essex.ac.uk</a>
+              </div>
+            </section>
+            <section>
+              <div class="contact-method">
+                <span class="icon solid alt fa-phone"></span>
+                <h3>Phone</h3>
+                <span>-</span>
+              </div>
+            </section>
+            <section>
+              <div class="contact-method">
+                <span class="icon solid alt fa-home"></span>
+                <h3>Address</h3>
+                <span>Mumbai, India</span>
+              </div>
+            </section>
+          </section>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <ul class="icons">
+            <!--
+					<li><a href="#" class="icon brands alt fa-twitter" target="_blank"><span
+								class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f" target="_blank"><span
+								class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-instagram" target="_blank"><span
+								class="label">Instagram</span></a></li>
+					-->
+            <li>
+              <a
+                href="https://github.com/shraddha-gore/"
+                class="icon brands alt fa-github"
+                target="_blank"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/shraddhagore/"
+                class="icon brands alt fa-linkedin-in"
+                target="_blank"
+                ><span class="label">LinkedIn</span></a
+              >
+            </li>
+          </ul>
+          <ul class="copyright">
+            <li>&copy; Untitled</li>
+            <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../../assets/js/jquery.scrollex.min.js"></script>
+    <script src="../../assets/js/browser.min.js"></script>
+    <script src="../../assets/js/breakpoints.min.js"></script>
+    <script src="../../assets/js/util.js"></script>
+    <script src="../../assets/js/main.js"></script>
+  </body>
+</html>

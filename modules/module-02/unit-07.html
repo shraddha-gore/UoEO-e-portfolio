@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Shraddha's UoEO e-Portfolio</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta
+      property="og:url"
+      content="https://shraddha-gore.github.io/UoEO-e-portfolio/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Shraddha's UoEO e-Portfolio" />
+    <meta
+      property="og:description"
+      content="Learn about Shraddha's journey of pursuing MSc Computer Science from the University of Essex Online."
+    />
+    <meta property="og:image" content="../../images/sg-logo-color.png" />
+    <link
+      rel="icon"
+      href="../../images/sg-logo-color.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <noscript>
+      <link rel="stylesheet" href="../../assets/css/noscript.css" />
+    </noscript>
+  </head>
+
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="alt style2">
+        <a href="../../index.html" class="logo"><strong>Home</strong></a>
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../module-01/module-page.html">Module 1</a></li>
+          <li><a href="module-page.html">Module 2</a></li>
+          <li><a href="../module-03/module-page.html">Module 3</a></li>
+          <li><a href="../module-04/module-page.html">Module 4</a></li>
+          <li><a href="../module-05/module-page.html">Module 5</a></li>
+          <li><a href="../module-06/module-page.html">Module 6</a></li>
+          <li><a href="../module-07/module-page.html">Module 7</a></li>
+          <li><a href="../module-08/module-page.html">Module 8</a></li>
+          <!-- <li><a href="landing.html">Landing</a></li> -->
+          <!-- <li><a href="generic.html">Generic</a></li> -->
+          <!-- <li><a href="elements.html">Elements</a></li> -->
+        </ul>
+        <!--
+            <ul class="actions stacked">
+                <li><a href="#" class="button primary fit">Get Started</a></li>
+                <li><a href="#" class="button fit">Log In</a></li>
+            </ul>
+            -->
+      </nav>
+
+      <!-- Main -->
+      <div id="main" class="alt">
+        <!-- Overview -->
+        <section id="overview">
+          <div class="inner">
+            <header class="major">
+              <h1>Module 2</h1>
+              <p>Secure Software Development (Computer Science)</p>
+            </header>
+            <header class="major">
+              <h3>Unit 7</h3>
+              <p>Introduction to Operating Systems</p>
+            </header>
+          </div>
+        </section>
+
+        <!-- Learning Outcomes -->
+        <section id="outcomes">
+          <div class="inner">
+            <h4>Learning Outcomes</h4>
+            <ul>
+              <li>
+                Describe mitigations to make operating systems more secure.
+              </li>
+              <li>
+                Explain some of the key risks and vulnerabilities associated
+                with operating systems.
+              </li>
+              <li>
+                Outline the differences between static and dynamic libraries and
+                when to use each.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- e-Portfolio Component -->
+        <section id="e-portfolio-component">
+          <div class="inner">
+            <h4>e-Portfolio Component: What is an Ontology?</h4>
+            <p>
+              What do you understand about the ontology that has been presented
+              for your reading this week? Could you attempt to define an
+              ontology that would be relevant to the system that you are
+              designing for the summative assessment?
+            </p>
+            <b>Response:</b>
+
+            <div class="response">
+              <p>
+                Ontologies are formal, explicit definitions of terms within a
+                domain and their relationships to other terms, encompassing a
+                collection of concepts (such as entities, objects, domains,
+                processes, goals, and outcomes), along with properties,
+                relationships, constraints, and axioms (Arnaut, Oliveira & Lima,
+                2010).
+              </p>
+              <p>
+                Below is a high-level ontology for the online retailer system to
+                be developed in unit 11:
+              </p>
+              <ol>
+                <li>
+                  User
+                  <ul>
+                    <li>
+                      Properties:
+                      <ul>
+                        <li>username: Unique identifier for each user.</li>
+                        <li>
+                          password: Hashed password for user authentication.
+                        </li>
+                        <li>
+                          is_admin: Boolean indicating if the user has
+                          administrative privileges.
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      Relationships:
+                      <ul>
+                        <li>
+                          Places Orders: A user can place multiple orders.
+                        </li>
+                        <li>
+                          Views Products and Orders: Users can view products
+                          available in the system and their past orders.
+                        </li>
+                        <li>
+                          Admin Privileges: A user with admin privileges can
+                          view system stats and update them.
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  Product
+                  <ul>
+                    <li>
+                      Properties:
+                      <ul>
+                        <li>
+                          name: Name of the product, acting as a unique
+                          identifier.
+                        </li>
+                        <li>price: Price of the product.</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Relationships:
+                      <ul>
+                        <li>
+                          Associated with Orders: Product is a part of orders
+                          placed by users.
+                        </li>
+                        <li>
+                          Viewed by Users: Users can view products available in
+                          the system.
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  Order
+                  <ul>
+                    <li>
+                      Properties:
+                      <ul>
+                        <li>order_id: Unique identifier for each order.</li>
+                        <li>username: User who placed the order.</li>
+                        <li>
+                          product_name: The product associated with the order.
+                        </li>
+                        <li>quantity: Number of products in the order.</li>
+                        <li>total: Total cost of the order.</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Relationships:
+                      <ul>
+                        <li>
+                          Placed by User: Each order is associated with a user.
+                        </li>
+                        <li>
+                          Viewed by Users: Users can view their past orders.
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+
+            <div class="references">
+              <b>References:</b>
+              <p>
+                Arnaut, W., Oliveira, K. & Lima, F. (2010) OWL-SOA: A Service
+                Oriented Architecture Ontology Useful during Development Time
+                and Independent from Implementation Time, IEEE.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Activity -->
+        <section id="activity">
+          <div class="inner">
+            <h4>Activity: Developing an API for a Distributed Environment</h4>
+            <p>
+              Using the Jupyter Notebook workspace, create a file named api.py
+              and copy the following code into it (a copy is provided for upload
+              to Codio/GitHub): You can install Jupyter Notebook on your local
+              machine following these instructions or via the University of
+              Essex Software Hub.
+            </p>
+
+            <div class="response">
+              <b>Code:</b>
+              <pre>
+			<code>
+from flask import Flask
+from flask_restful import Api, Resource, reqparse
+	
+app = Flask(__name__)
+api = Api(app)
+	
+users = [
+	{
+		"name": "James",
+		"age": 30,
+		"occupation": "Network Engineer"
+	},
+	{
+		"name": "Ann",
+		"age": 32,
+		"occupation": "Doctor"
+	},
+	{
+		"name": "Jason",
+		"age": 22,
+		"occupation": "Web Developer"
+	}
+]
+	
+class User(Resource):
+	def get(self, name):
+		for user in users:
+			if(name == user["name"]):
+				return user, 200
+		return "User not found", 404
+	
+	def post(self, name):
+		parser = reqparse.RequestParser()
+		parser.add_argument("age")
+		parser.add_argument("occupation")
+		args = parser.parse_args()
+	
+		for user in users:
+			if(name == user["name"]):
+				return "User with name {} already exists".format(name), 400
+	
+		user = {
+			"name": name,
+			"age": args["age"],
+			"occupation": args["occupation"]
+		}
+		users.append(user)
+		return user, 201
+	
+	def put(self, name):
+		parser = reqparse.RequestParser()
+		parser.add_argument("age")
+		parser.add_argument("occupation")
+		args = parser.parse_args()
+	
+		for user in users:
+			if(name == user["name"]):
+				user["age"] = args["age"]
+				user["occupation"] = args["occupation"]
+				return user, 200
+		
+		user = {
+			"name": name,
+			"age": args["age"],
+			"occupation": args["occupation"]
+		}
+		users.append(user)
+		return user, 201
+	
+	def delete(self, name):
+		global users
+		users = [user for user in users if user["name"] != name]
+		return "{} is deleted.".format(name), 200
+		
+api.add_resource(User, "/user/&lt;string:name&gt;")
+
+app.run(debug=True)
+			</code>
+			</pre>
+            </div>
+
+            <div class="question-section">
+              <h4>
+                1. Run the API.py code. Take a screenshot of the terminal
+                output. What command did you use to compile and run the code?
+              </h4>
+              <div>
+                <div class="image">
+                  <img
+                    src="../../artefacts/module-02/unit-07-activity-1-run-api-py.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <ul>
+                <li>
+                  The Python script <code>api.py</code> was executed using the
+                  python command. This initiated a Flask server instance after
+                  resolving a <code>ModuleNotFoundError</code>.
+                </li>
+              </ul>
+            </div>
+
+            <div class="question-section">
+              <h4>
+                2. Run the following command at the terminal prompt: w3m
+                http://127.0.0.1:5000/user/Ann. What happens when this command
+                is run, and why?
+              </h4>
+              <div>
+                <div class="image">
+                  <img
+                    src="../../artefacts/module-02/unit-07-activity-1-existing-user.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <ul>
+                <li>
+                  Upon executing the above command, the w3m browser prompted the
+                  user to save the response file. The saved file contained a
+                  JSON object representing the user's details. To view the JSON
+                  response directly in the terminal, the
+                  <code>dump</code> argument was added to the command.
+                </li>
+              </ul>
+            </div>
+
+            <div class="question-section">
+              <h4>
+                3. Run the following command at the terminal prompt: w3m
+                http://127.0.0.1:5000/user/Adam. What happens when this command
+                is run, and why?
+              </h4>
+              <div>
+                <div class="image">
+                  <img
+                    src="../../artefacts/module-02/unit-07-activity-1-non-existing-user.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <ul>
+                <li>
+                  The above command was executed with the
+                  <code>dump</code> argument. However, no user details were
+                  returned as the specified user does not exist in the database.
+                </li>
+              </ul>
+            </div>
+
+            <div class="question-section">
+              <h4>4. What capability is achieved by the flask library?</h4>
+              <ul>
+                <li>
+                  Flask, a lightweight Python web framework, is widely used for
+                  building web applications. It offers a simple and flexible
+                  approach to handling HTTP requests and responses, rendering
+                  dynamic content using templates, and integrating with various
+                  extensions for additional features.
+                </li>
+                <li>
+                  Beyond web applications, Flask is also a popular choice for
+                  creating APIs (Application Programming Interfaces). Its
+                  modular design and ease of use make it well-suited for
+                  developing RESTful APIs that can be consumed by other
+                  applications or services.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Reflection -->
+        <section id="reflection">
+          <div class="inner">
+            <h4>Reflection</h4>
+            <ul>
+              <li>
+                Unit 7 presented significant challenges due to personal
+                commitments. To prioritize effectively, I concentrated on the
+                e-Portfolio Component and API development activity. Despite the
+                need to install Cygwin on my Windows device, the API development
+                activity was worthwhile.
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- Contact -->
+      <section id="contact">
+        <div class="inner">
+          <section>
+            <form method="post" action="#">
+              <div class="fields">
+                <div class="field half">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" />
+                </div>
+                <div class="field half">
+                  <label for="email">Email</label>
+                  <input type="text" name="email" id="email" />
+                </div>
+                <div class="field">
+                  <label for="message">Message</label>
+                  <textarea name="message" id="message" rows="6"></textarea>
+                </div>
+              </div>
+              <ul class="actions">
+                <li>
+                  <input type="submit" value="Send Message" class="primary" />
+                </li>
+                <li><input type="reset" value="Clear" /></li>
+              </ul>
+            </form>
+          </section>
+          <section class="split">
+            <section>
+              <div class="contact-method">
+                <span class="icon solid alt fa-envelope"></span>
+                <h3>Email</h3>
+                <a href="#">sg24002@essex.ac.uk</a>
+              </div>
+            </section>
+            <section>
+              <div class="contact-method">
+                <span class="icon solid alt fa-phone"></span>
+                <h3>Phone</h3>
+                <span>-</span>
+              </div>
+            </section>
+            <section>
+              <div class="contact-method">
+                <span class="icon solid alt fa-home"></span>
+                <h3>Address</h3>
+                <span>Mumbai, India</span>
+              </div>
+            </section>
+          </section>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <ul class="icons">
+            <!--
+					<li><a href="#" class="icon brands alt fa-twitter" target="_blank"><span
+								class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f" target="_blank"><span
+								class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-instagram" target="_blank"><span
+								class="label">Instagram</span></a></li>
+					-->
+            <li>
+              <a
+                href="https://github.com/shraddha-gore/"
+                class="icon brands alt fa-github"
+                target="_blank"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/shraddhagore/"
+                class="icon brands alt fa-linkedin-in"
+                target="_blank"
+                ><span class="label">LinkedIn</span></a
+              >
+            </li>
+          </ul>
+          <ul class="copyright">
+            <li>&copy; Untitled</li>
+            <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../../assets/js/jquery.scrollex.min.js"></script>
+    <script src="../../assets/js/browser.min.js"></script>
+    <script src="../../assets/js/breakpoints.min.js"></script>
+    <script src="../../assets/js/util.js"></script>
+    <script src="../../assets/js/main.js"></script>
+  </body>
+</html>
